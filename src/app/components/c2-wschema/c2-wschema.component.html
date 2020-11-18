@@ -1,0 +1,263 @@
+<video muted loop autoplay controls="true" id="BIKESHOPVIDEO" width='100%' height='100%' src="../../../assets/videos/Riding Your Bike To Work -Have You Considered The Cycle To Work Scheme.mp4" class="videoC" type='video/mp4' [muted]="true"></video>
+<section id='link' class=" MOUNTAIN">
+    
+    <h1 class="titleMountain">HOW IT WORKS</h1>
+    <div class="mountainBikes" id="objectbikes">
+        <p>Cycle to Work allows you to get up to £1,000 worth of bike and safety equipment through your employer. You then pay a monthly salary sacrifice charge to effectively ‘hire’ the bike and kit, typically over a 12 or 18-month period. When the
+            hire period is over, you have the option of buying the bike outright at a ‘fair market value’, continue hiring it, or simply give it back.
+            <p>
+                <p>You can also buy any equipment deemed necessary to bike to work under the Cycle to Work scheme. This can include clothing, helmets, panniers, locks, lights, tool kits, puncture repair, tubes etc. and even an additional bike. Equipment
+                    bought via Cycle to Work schemes will have twenty percent VAT added, not payable if you buy direct.</p>
+                <p>Just follow these 4 simple steps:</p>   
+<!-- </section> -->
+<section id="contact" class="section5">
+    <div class="row">
+        <div class="col-md-3 col-6">
+            <h2 class=contacttitle>SIGN UP</h2>
+            <img src="../../../assets/img/bike-01-512Sign.png" class="img-fluid">
+            <p class="icons">Your employer will be supplied a unique account number which will be needed when applying for your certificate.</p>
+        </div>
+
+        <div class="col-md-3 col-6">
+            <h2 class=contacttitle>GET CERTIFICATE</h2>
+            <img src="../../../assets/img/bike-01-512OKDoc.png" class="img-fluid">
+            <p class="icons">When your application is approved by your employer, your certificate will be emailed to you.</p>
+        </div>
+
+        <div class="col-md-3 col-6">
+            <h2 class=contacttitle>GET EQUIPMENT</h2>
+            <img src="../../../assets/img/bike-01-512Helmet.png" class="img-fluid">
+            <p class="icons">Collect your new gear. Redeem your certificate in store, online or over the phone within the next 3 months.</p>
+        </div>
+
+        <div class="col-md-3 col-6">
+            <h2 class=contacttitle>SALARY SACRIFICE</h2>
+            <img src="../../../assets/img/bike-01-512Bike.png" class="img-fluid">
+            <p class="icons">Salary sacrifice starts. Collect your bike and enjoy the ride! You've become healthier, greener and start saving in your comute every day.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<section style="background-color: white; height: 100vh;">
+    <div class="row calculator">
+        <div class="col-6 colTable" style="height: 100%;">
+            <div class="table-responsive" style="height: 100%;">
+                <table class="table  table-responsive table-bordered table-hover" style="height: 100%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class=contacttitle scope="col" colspan="5">
+                                EXAMPLE SAVINGS</th>
+                        </tr>
+                        <th class="thead-light" scope="col" style="text-align: center; 
+        font-size: 2rem; background-color: #31353d; color: white" colspan="5">
+                            Higher rate taxpayer: 40% Tax + 7% USC + 4% PRSI = 51%</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Cost of bike & Equipment (Before savings)</th>
+                            <td>£250</td>
+                            <td>£500</td>
+                            <td>£750</td>
+                            <td>£1000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tax relief saving</th>
+                            <td>£128</td>
+                            <td>£255</td>
+                            <td>£383</td>
+                            <td>£510</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Net Cost</th>
+                            <td>£123</td>
+                            <td>£245</td>
+                            <td>£368</td>
+                            <td>£490</td>
+                        </tr>
+                            <tr>
+                            <th class="thead-light" scope="col" style="text-align: center; 
+                                font-size: 2rem; background-color: #31353d; color: white" colspan="5">
+                                Standard rate taxpayer: 20% Tax + 7% USC + 4% PRSI = 31%</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cost of bike & Equipment (Before bodysavings)</th>
+                            <td>£250</td>
+                            <td>£500</td>
+                            <td>£750</td>
+                            <td>£1000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tax relief saving</th>
+                            <td>£78</td>
+                            <td>£155</td>
+                            <td>£233</td>
+                            <td>£310</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Net Cost</th>
+                            <td>£173</td>
+                            <td>£345</td>
+                            <td>£518</td>
+                            <td>£690</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6 calc" style="height: 100%;">
+            
+            <!-- <div class="bordered"> -->
+            <!-- <form class="form-inline"style="color: #757575;"> -->
+            <!-- <div class="form-row"> -->
+            <h1 class=contacttitle>SAVINGS CALCULATOR</h1>
+            
+            <!-- <img src="../../../assets/img/bike-01-512Bike.png" class="img-fluid"> -->
+            <p class="icons">Find out how much you can save on the cycle to work scheme.</p>
+            <!-- <p class="icons">There will be no additional fees to pay.</p> -->
+            <!-- <article class="form-group col-md-6 calculatorRows"> -->
+            <!-- <div class="col-md-8"> -->
+                    <form [formGroup]="calcForm" (ngSubmit)="onSubmit()">
+                        <div class="row rowInput">
+                            <div class="form-group md-form inputCalc col-md-6">
+                                <mdb-icon fas icon="dollar-sign" class="prefix"></mdb-icon>
+                                <input type="text" formControlName="salary" class="form-control inputField" 
+                                [ngClass]="{ 'is-invalid': submitted && f.salary.errors }" />
+                                <label class="labelForm inputLabel" for="salary" >
+                                    Your salary:</label>
+                                <div  *ngIf="submitted || f.salary.errors || (f.salary.dirty || f.salary.touched)" 
+                                class="invalid-feedback">
+                                    <div *ngIf="f.salary.errors.required || f.salary.errors.pattern">
+                                        Yor salary is required and it should be numbers</div>
+                                </div>
+                            </div>
+                            <div class="form-group md-form inputCalc col-md-6">
+                                <mdb-icon fas icon="dollar-sign" class="prefix"></mdb-icon>
+                                <input type="text" formControlName="payment" class="form-control inputField" 
+                                [ngClass]="{ 'is-invalid': submitted && f.payment.errors }" />
+                                <label class="labelForm inputLabel" for="payment" >
+                                    Total to pay:</label>
+                                <div  *ngIf="submitted || f.payment.errors || (f.payment.dirty || f.payment.touched)" 
+                                class="invalid-feedback">
+                                    <div *ngIf="f.payment.errors.required || f.payment.errors.pattern">
+                                        The payment is required and it should be numbers</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="icons">Select the frecuency of payment:</p>
+                        <div class="form-group btn-group btn-group-toggle rowInput" style="width: 95%!important;"data-toggle="buttons">
+                            <div class="row" style="width: 100%!important;">
+                                <div class="md-form col-md-4">
+                                    <div class="custom-control custom-radio btn btn-primary" style="height: 100%;" type="button"
+                                    aria-haspopup="true" aria-expanded="false" mdbWavesEffect mdbBtn>Monthly
+                                        <input id="male" style="width: 100%; height: 100%;" type="radio" class="custom-control-input" 
+                                        value="monthly" name="frecuency" formControlName="frecuency">
+                                    </div>
+                                </div>
+        
+                                <div class="md-form col-md-4">
+                                    <div class="custom-control custom-radio btn btn-primary" style="height: 100%;" type="button"
+                                    aria-haspopup="true" aria-expanded="false" mdbWavesEffect mdbBtn>Fortnightly
+                                        <input id="male" style="width: 100%; cursor:pointer;" type="radio" class="custom-control-input" 
+                                        value="fortnightly" name="frecuency" formControlName="frecuency">
+                                    </div>
+                                </div>   
+                                
+                                <div class="md-form col-md-4">
+                                    <div class="custom-control custom-radio btn btn-primary" style="height: 100%;"  type="button"
+                                    aria-haspopup="true" aria-expanded="false" mdbWavesEffect mdbBtn>Weekly
+                                        <input id="male" style="width: 100%;" type="radio" class="custom-control-input" 
+                                        value="weekly" name="frecuency" formControlName="frecuency">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="text-center">
+                            <button type="submit" (click)="submit()"
+                            class="btn btn-contact btn-danger btn-lg btn-block">Submit</button>
+                        </div>
+                    </form>
+            </div>
+    </div>
+</section>
+<section id="ABOUT US" class="aboutUs">
+    <h1 class=contacttitle>ABOUT</h1>
+    <div class="holdingC">
+        <div class="aboutText">
+
+            <article class="zoomin frame toolWorkshop">
+                <img class="workShop imgAbout" src="../../../assets/img/tools-folder-svgWORSHOP.png">
+            </article>
+
+            <p>We are bike specialist with more than 10 years experience looking forward to seeing your 
+                satisfaction with our products and workshop. We give you the best advise to buy the right bike, 
+                setting up for you every component and personalizing
+                your future bike.</p>
+
+
+            <p>We offer you the best price with the cycling to work scheme!.</p>
+
+            <p>You can trust in our service! we offer a range of bike services in-store to 
+                keep your bike on the road and you don't have to worry about any maintenance 
+                because we give you a strong warranty.</p>
+        </div>
+
+    </div>
+</section>
+<!-- CONTACT SECTION ============================================= -->
+</div>
+<section id="contact" class="section5">
+    <div class="row">
+        <div class="col-md-3 col-6">
+            <h1 class=contacttitle>CONTACT</h1>
+            <div style="text-align: center">
+                <p>Ground Floor10-1 St Mark's HillLondon KT6 4PJ</p>
+                <a href="tel:07428228258"><i class="fa fa-2x fa-phone iconsContact" aria-hidden="true"></i>
+        07428228258</a>
+                <a href="mailto:cristianbisby@gmail.com"><i class="fa fa-2x fa-envelope iconsContact" aria-hidden="true"></i>
+        Email us</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <h1 class=contacttitle>BIKES</h1>
+            <div style="text-align: center">
+                <a href="../mountainBikes/index.html">Mountain bikes</a>
+                <a href="../roadBikes/index.html">Road bikes</a>
+                <a href="../C2WSchema/index.html">cycling to work scheme</a>
+                
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <h1 class=contacttitle>CLEARANCE BIKES</h1>
+            <div style="text-align: center">
+                <p>Are you on the budget? Try our clearance bikes!</p>
+                <a href="">Mountain bikes</a>
+                <a href="">E-Bikes</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 otherServices">
+            <h1 class=contacttitle>OTHER SERVICES</h1>                <div style="text-align: center">
+                <a href="../demoBikes/index.html">Demo bikes</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div #mapWrapper id="map"></div>
+<!-- FOOTER ===================================================== -->
+<footer>
+    <div class="footerIcons">
+        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&nbsp;&nbsp;
+        <a href="#"><i class="fa fa-twitter"
+      aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="#"><i class="fa fa-facebook"
+      aria-hidden="true"></i></a>&nbsp;&nbsp;<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    </div>
+    <div class="footerD">
+        <span>    &copy; BestBikes</span>
+    </div>
+</footer>

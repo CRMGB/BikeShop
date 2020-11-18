@@ -1,0 +1,31 @@
+<div mat-dialog-content>
+  <div id="closeMenu">
+    <a id="close" mat-button class="fa fa-close fa-4x mb-4" (click)="onNoClick()"></a>
+    </div>
+    <div class="vertical-menu">
+      <div class="overlay-content">
+        <a routerLink="./mountain-bikes.component" routerLinkActive="active-link">WORKSHOP</a>
+        <a (click)="mountainBikes()">MOUNTAIN BIKES</a>
+        <a href="#">ROAD BIKES</a>
+        <a href="#">DEMO BIKES</a>
+        <a (click)="C2WS()">CYCLING TO WORK SCHEME</a>
+        <a href="#">CONTACT US</a>
+        <div id="cartMenu">
+          <a class="fa fa-shopping-cart fa-4x mb-4"></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- <h1 mat-dialog-title>Screen #1</h1>
+
+<mat-dialog-content>
+  <p>This is the first screen. Here we can give some explanation about how everything works. We can use this as a sort of wizard and still be able to keep our components separate.</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="goToScreen2()">Next screen</button>
+</mat-dialog-actions> -->
+
+<!-- <router-outlet></router-outlet> -->

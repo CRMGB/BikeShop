@@ -1,0 +1,2235 @@
+h1 {
+    color: blue;
+}
+
+.app {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    overflow: auto;
+}
+
+h1 {
+    color: darkred;
+    /*overrides the conflict*/
+}
+
+
+/*---------------------------------------------------------------------
+                        MOBILE DEFAULT STYLES - GLOBAL STYLES
+---------------------------------------------------------------------*/
+
+
+/* Prevents adjustments of font size after orientation change in IE on Windows phone and in IOS */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
+/* Apply a natural box model layout to all elements */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                        HOME STYLES
+
+===============================================================================================================================================================*/
+
+
+/*-------------------------------------------------- Menu settings -------------------------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background: #31353d;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+.formproductBox {
+    visibility: visible!important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lusitana);
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    padding: 6px 20px;
+    font-size: 48px;
+}
+
+#buttonMenu {
+    opacity: 0.6;
+    background-color: transparent;
+    position: fixed;
+    z-index: 2;
+    top: 24px;
+    left: 3%;
+    border: none;
+    width: 36px;
+    height: 30px;
+    outline: none;
+    transition: opacity 0.2s ease-out;
+    cursor: pointer;
+}
+
+#buttonMenu:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: auto;
+    width: 100%;
+    background: linear-gradient(to bottom, #98B296, #98B296 20%, transparent 20%, transparent 40%, #98B296 40%, #98B296 60%, transparent 60%, transparent 80%, #98B296 80%, #98B296 100%);
+    transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
+}
+
+#buttonMenu:after {
+    opacity: 0;
+    content: '×';
+    color: white;
+    position: absolute;
+    top: 16px;
+    left: -4px;
+    font-family: Arial, sans-serif;
+    font-size: 76px;
+    line-height: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+#buttonMenu:active {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+}
+
+#buttonMenu:hover {
+    opacity: 1;
+}
+
+.open #buttonMenu {
+    opacity: 1;
+}
+
+.open #buttonMenu:before {
+    opacity: 0;
+    width: 0;
+}
+
+#cartMenu {
+    text-align: center;
+}
+
+.open #buttonMenu:after {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
+    transform: translate3d(0, 0, 0) rotate(360deg);
+    transition: opacity 0.4s 1s ease-out, -webkit-transform 0.4s 1s ease-out;
+    transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
+    transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out, -webkit-transform 0.4s 1s ease-out;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+nav:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #31353d;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+    -webkit-transform: scale(0.04), translateY(9999px);
+    transform: scale(0.04), translateY(9999px);
+    overflow: hidden;
+}
+
+.open nav {
+    top: 0;
+}
+
+.open nav:before {
+    -webkit-animation: menu-animation 0.8s ease-out forwards;
+    animation: menu-animation 0.8s ease-out forwards;
+}
+
+.itemRow {
+    text-align: center;
+    margin-top: 15%;
+}
+
+.simpleCart_checkout {
+    margin: 39%;
+}
+
+#cd-cart.speed-in {
+    right: 0;
+}
+
+.simpleCart_total {
+    color: brown;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.addToCart a {
+    color: white;
+}
+
+.addToCart a:after {
+    content: " \1F6D2";
+    /*content: " 🛒";*/
+}
+
+#cart {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 20px;
+    margin-top: 1.5vh!important;
+    cursor: pointer;
+}
+
+.itemRow {
+    font-size: 2.6rem!important;
+    color: #74fff9!important;
+    cursor: auto!important;
+}
+
+#cd-cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    min-width: 350px;
+    background-color: #31353d;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 3;
+    transition: right 0.3s;
+}
+
+#cd-cart.speed-in {
+    right: 0;
+}
+
+#cd-shadow-layer {
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(67, 87, 121, 0.6);
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+#cd-shadow-layer.is-visible {
+    display: block;
+    -webkit-animation: cd-fade-in 0.3s;
+    -moz-animation: cd-fade-in 0.3s;
+    animation: cd-fade-in 0.3s;
+}
+
+h3 {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.Cart-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 2rem;
+    min-height: 3rem;
+    color: #258b87;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-transition: min-height 200ms;
+    transition: min-height 200ms;
+}
+
+.Cart-button {
+    opacity: 0;
+    content: '×';
+    color: white;
+    position: absolute;
+    top: 16px;
+    left: -4px;
+    font-family: Arial, sans-serif;
+    font-size: 76px;
+    line-height: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+.cd-container {
+    /* this class is used to horizontally align the gallery of items */
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cd-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.cd-img-replace {
+    /* replace text with a background-image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.fa-shopping-cart, .fa-close {
+    color: #e1e0dea8!important;
+    cursor: pointer!important;
+}
+
+.fa-shopping-cart:hover, .fa-close:hover {
+    color: #258b87!important;
+}
+
+.fa-close {
+    position: fixed;
+    z-index: 2;
+    top: 24px;
+    left: 3%;
+    border: none;
+    outline: none;
+}
+#contact {
+    padding-bottom: 5%;
+}
+
+
+/*-------------------------------------------------- Menu settings -------------------------------------------------*/
+
+img,
+video {
+    width: 100%;
+    /*will fill the whole page with the video and the images plus is responsive with the sccreen size of the device*/
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    color: #444;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* text-align: center; */
+}
+
+.headerC {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+    /*top and bottom are 100px and right and left auto*/
+}
+
+
+/* Global Variables */
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 0.2%;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1.2%;
+}
+
+a:hover {
+    color: #29a29d;
+}
+
+.mainMenu {
+    width: 350px;
+    height: 800px;
+    margin: 0px;
+    /*top and bottom are 100px and right and left auto*/
+}
+
+.footerIcons {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    display: block;
+}
+
+.fa-linkedin:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-facebook:hover {
+    font-size: 3.5rem;
+    transition: all 0.1s ease-in-out;
+}
+
+
+/*=================================HOME====================================*/
+
+
+/*===================**************LOADER**************==================================*/
+
+@keyframes lds-gear {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes lds-gear {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.lds-gear>div {
+    content: "";
+    display: block;
+    -webkit-transform-origin: 100px 100px;
+    transform-origin: 100px 100px;
+    -webkit-animation: lds-gear 2.5s infinite linear;
+    animation: lds-gear 2.5s infinite linear;
+    position: relative;
+}
+
+.lds-gear>div div {
+    position: absolute;
+    width: 26px;
+    height: 192px;
+    background-color: #FFF;
+    background: forestgreen;
+    left: 100px;
+    top: 100px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.lds-gear>div div:nth-child(1) {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+}
+
+.lds-gear>div div:nth-child(3) {
+    -webkit-transform: translate(-50%, -50%) rotate(30deg);
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.lds-gear>div div:nth-child(4) {
+    -webkit-transform: translate(-50%, -50%) rotate(60deg);
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.lds-gear>div div:nth-child(5) {
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.lds-gear>div div:nth-child(6) {
+    -webkit-transform: translate(-50%, -50%) rotate(120deg);
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.lds-gear>div div:nth-child(7) {
+    -webkit-transform: translate(-50%, -50%) rotate(150deg);
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+
+.lds-gear>div div:nth-child(8) {
+    width: 80px;
+    height: 80px;
+    background: black;
+    border-radius: 50%;
+}
+
+.lds-gear {
+    position: fixed;
+    right: 105vh;
+    top: 50vh;
+    bottom: 50vh;
+    z-index: 9999;
+    width: 59px !important;
+    height: 59px !important;
+    -webkit-transform: translate(-29.5px, -29.5px) scale(0.295) translate(29.5px, 29.5px);
+    transform: translate(-29.5px, -29.5px) scale(0.295) translate(29.5px, 29.5px);
+}
+
+p {
+    padding: 0 10px;
+    text-align: center;
+    color: floralwhite;
+    font-size: x-large;
+}
+
+.roadSchema,
+.toolWorkshop {
+    width: 25%!important;
+    float: left!important;
+    position: relative!important;
+    margin: 5%!important;
+    cursor: pointer;
+}
+
+.img1 {
+    width: 80%!important;
+}
+
+#preloader .lds-gear:after {
+    content: "";
+    display: block;
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000000d6;
+    z-index: 9999;
+}
+
+#preloader .preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/*==============================*/
+
+
+/*===================**************LOADER**************==================================*/
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+
+.homeBgImage {
+    position: relative;
+    list-style: none;
+    background-color: aqua;
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    /*moves the image as long as you resize the browser*/
+    background-size: cover;
+    border-bottom: 15px solid rgba(yellow);
+    background-attachment: fixed;
+    /*will sick the picture as long as we scroll down*/
+    height: 100vh;
+}
+
+.slogan {
+    padding: 0.9%;
+    position: absolute;
+    top: 250px;
+    right: 20px;
+    padding-top: 0px;
+    font-family: "28_days";
+    letter-spacing: 3px;
+    font-size: 2em;
+    font-weight: lighter;
+    text-align: right;
+    color: darkred;
+    background-color: #159031ad;
+}
+
+.mainHeading {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    padding: 0.9%;
+    color: darkred;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: right;
+    background-color: #159031ad;
+}
+
+.navC {
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    color: white;
+    height: auto;
+    display: block;
+    width: 100%;
+    background-color: #0d1f119e;
+    border-bottom: 2px solid rgba(194, 166, 255, 0.2);
+}
+
+
+/*&#9776; this is the code for 3 bar menu*/
+
+.navBtn {
+    font-size: 2.5em;
+    display: block;
+    width: 20%;
+    margin: 0 4vw 0 73vw;
+    padding: 7px 3%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0d1f119e;
+}
+
+
+/* 
+li {
+    display: inline !important;
+} */
+
+#mainNav {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar-expand-lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.titleworshop {
+    position: relative;
+    font-size: 50px;
+}
+
+.video-cover {
+    position: relative;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+
+.video-section {
+    position: relative;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 100%;*/
+    padding-top: 0%;
+}
+
+.logoC {
+    height: 90px;
+    width: 90px;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-align: left;
+    align-self: flex-start;
+    position: absolute;
+    z-index: 99;
+    LEFT: 38VH;
+}
+
+.seacrhBar {
+    position: absolute;
+    height: 80px;
+    width: 500px;
+    top: 40px;
+    left: 700px;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-align: left;
+    align-self: flex-start;
+    padding-left: 35px;
+    background-attachment: fixed;
+    /*will sick the picture as long as we scroll down*/
+}
+
+
+/* li {
+    border-bottom: 2px solid rgba(blue);
+} */
+
+
+/*==============================================================*/
+
+
+/*=============the popup window=================================*/
+
+
+/*==============================================================*/
+
+#blanket {
+    background-color: #111;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    position: absolute;
+    z-index: 9001;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.MOUNTAIN {
+    background-color: #101010;
+    padding-top: 5%;
+}
+.ROAD {
+    background-color: white;
+    padding-top: 5%;
+}
+
+
+/*=========================End Tickbox=================================*/
+
+.title1 {
+    text-align: left;
+    background-color: #184c24a3;
+    padding: 5px;
+}
+
+.imgtoggle {
+    width: 40%;
+    position: relative;
+    top: 20%;
+    float: right;
+}
+
+.myform {
+    position: relative;
+    top: 10%;
+    height: 100%;
+    /*    left:-10%;*/
+}
+
+.text1 {
+    background-color: #023c10e6 !important;
+    overflow: hidden;
+    color: aliceblue;
+    padding: 2px;
+    padding: 4px;
+    width: max-content;
+    justify-content: center;
+    left: 2%;
+    position: relative;
+}
+
+.divColor {
+    background-color: #023c10e6 !important;
+}
+
+.row1 {
+    position: relative;
+    display: inline-block;
+    left: 2%;
+    float: left;
+    top: 2%;
+    text-align: left;
+    background-color: #023c10e6 !important;
+    padding: 2%;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    left: 10%;
+    /*    top: 10%;*/
+    text-align: left;
+    font-family: "28_days";
+}
+
+.nameForm1,
+.contactForm,
+.emailForm,
+.repairsBar,
+.form-control {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #bda34f;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 6px 6px 6px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.form-control {
+    width: 160px !important;
+}
+
+.form-control {
+    background-color: #159031ad;
+}
+
+.repairsBar:focus {
+    width: 30%;
+    background-color: #159031ad;
+}
+
+.contactForm,
+.emailForm:focus {
+    width: 95%;
+    background-color: #159031ad;
+}
+
+.nameForm1:focus {
+    width: 95%;
+    background-color: #159031ad;
+}
+
+.form1 {
+    position: relative;
+    display: inline-block;
+    left: 20%;
+    float: left;
+    top: -12%;
+    text-align: left;
+    padding-left: 5%;
+    width: 20%;
+    margin: 2%;
+}
+
+.form2 {
+    position: relative;
+    display: inline-block;
+    left: -23%;
+    float: left;
+    top: -12%;
+    text-align: left;
+    width: 10%;
+    margin: 2%;
+}
+
+.formFIG {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.contact1 {
+    float: left;
+    /*    top: 15%;*/
+    text-align: left;
+    justify-content: flex-start;
+    margin: 2%;
+}
+
+.buttonPop {
+    position: relative;
+    top: 88%;
+    justify-content: center;
+    BACKGROUND-COLOR: BLACK;
+    COLOR: WHITE;
+    PADDING: 1%;
+}
+
+S #popUpDiv {
+    position: relative;
+    background-color: #90d0e2;
+    width: 96%;
+    height: 550%;
+    z-index: 9002;
+    margin-top: 5%;
+}
+
+
+/*=============***************MAIN WEBSIDE !! BIKES!!***********=============*/
+
+.titleMountain {
+    text-align: center;
+    color: #2cdae4 !important;
+}
+
+.titleRoad {
+    text-align: center;
+    color: #2cb5bd !important;
+}
+
+
+/* .container {
+    width: 100%;
+    top: 80px;
+    position: relative;
+} */
+
+.section5 {
+    margin: 0px !important;
+    position: relative;
+    background-color: #101010;
+}
+
+.bike {
+    position: absolute;
+    top: 350px;
+    left: 60px;
+    padding-top: 0px;
+    letter-spacing: 3px;
+    font-size: 2em;
+    color: yellowgreen;
+}
+
+.containersection {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    padding-top: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    background-color: #101010;
+    font-size: 1em;
+    left: 55px;
+    top: 0px;
+}
+
+.zoomin img:hover {
+    transform: scale(1.2)
+}
+
+.zoomin img {
+    height: 80%;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.mountainBike {
+    width: 50%;
+    height: 100%;
+    /*    position: absolute;*/
+    padding-top: 20px;
+    font-weight: bold;
+    text-align: left;
+    left: 10px;
+    top: 1550px;
+    /*    height:250px;*/
+}
+
+.racetitle {
+    position: relative;
+    justify-content: center;
+    left: 45%;
+    top: -5px;
+}
+
+.raceBikes {
+    width: 100%;
+    height: 100%;
+    /*    position: absolute;*/
+    padding-top: 20px;
+    font-weight: bold;
+    text-align: left;
+    left: 10px;
+    top: 4950px;
+}
+
+
+/*---------------------------------------------------------------------
+            CONTACT FORM AND FOOTER STYLES
+---------------------------------------------------------------------*/
+
+.contactT {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.smLogo {
+    font-size: 2em;
+    margin: 2% 3% 0 3%;
+    color: rgba(195, 168, 255, 0.8);
+    transition: all 0.5s ease;
+}
+
+.iconsContact {
+    font-size: 1em;
+    margin: 1%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.contactD a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    background-color: forestgreen;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.formContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+}
+
+.formC {
+    color: white;
+    width: 100%;
+    margin: 0 auto 100px auto;
+    display: block;
+}
+
+.userPass {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.inputFields {
+    border: none;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(left, rgba(25, 25, 25, 0.9), rgba(25, 25, 25, 0.5));
+    width: 98%;
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: 30px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: lighter;
+    padding: 0 5%;
+}
+
+.inputMessage {
+    border: none;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(left, rgba(25, 25, 25, 0.9), rgba(25, 25, 25, 0.5));
+    width: 98%;
+    outline: none;
+    margin: 10px 0 20px 0;
+    height: auto;
+    color: white;
+    font-size: 1.1em;
+    font-weight: lighter;
+    padding: 20px 5%;
+}
+
+.sendB {
+    font-size: 1em;
+    color: white;
+    line-height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: forestgreen;
+    transition: all 0.5s ease;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.list-unstyled {
+    list-style: none;
+    color: red;
+}
+
+#map {
+    width: 100%!important;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    top: -15%;
+    text-align: left;
+    padding-left: 5%;
+    width: 28%;
+}
+
+.contactForm {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #bda34f;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 6px 6px 6px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.socialMedia {
+    /* Flexbox code for alignment demonstration*/
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    /*font-size: 1em;
+    height: 30px;
+    text-align: center;
+    color: white;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    width: 90%;*/
+}
+
+.footerD {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-weight: lighter;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    display: block;
+}
+
+footer {
+    background-color: black;
+    clear: both;
+    margin: 0 auto;
+}
+
+.containerFilter {
+    /* The image used */
+    background-image: url("../assets/img/chain-1005641_1920-compressor.jpg");
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutUs {
+    background-color: #101010;
+    height: 65vh;
+}
+
+
+/*===============*******************ABOUT SECTION***********************=====================*/
+
+.aboutText p {
+    font-size: 1.1em;
+    line-height: normal;
+    color: aliceblue;
+    text-align: left;
+    margin-bottom: 2%;
+}
+
+.toolWorkshop {
+    margin-top: unset!important;
+}
+
+.imgAbout {
+    width: 80%!important;
+    float: right;
+    margin: 1%;
+}
+
+.contacttitle {
+    color: #2cb5bd !important;
+    margin: unset!important;
+    padding: 2%;
+    text-align: center;
+}
+
+.labelcontact {
+    background-color: unset;
+}
+
+
+/* ====================================================================================
+======================Here we are demonstrating the flexbox wrap property =============
+=====================================================================================*/
+
+.allSidebars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
+.productBox, .productBox2{
+    color: white;
+    margin: 5%;
+    width: 450px;
+    text-align: left;
+    visibility: visible!important;
+}
+
+.productBox2 {
+    color: black!important;
+}
+
+#objectbikes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: auto;
+}
+
+.containersection,
+containersection1,
+containersection2,
+containersection3 {
+    margin: 1%;
+    width: 230px;
+    text-align: center;
+}
+
+figure {
+    cursor: pointer;
+    margin: 0;
+}
+
+.pDetail {
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.price {
+    display: block;
+}
+
+.cartTitle {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2cb5bd !important;
+}
+
+.addToCart {
+    padding: 15px 20px;
+    display: block;
+    margin: 2vh auto 15vh auto;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgb(32, 54, 4);
+}
+
+.addToCart a {
+    color: white;
+}
+
+.addToCart a:after {
+    content: " \1F6D2";
+    /*content: " 🛒";*/
+}
+
+.deliveryF {
+    text-align: center;
+    padding: 30px 5%;
+    border: 1px solid #ccc;
+}
+
+.userPass {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+
+/*---------------------------------------------------------------------=============================================
+                 IPHONE 6 - 320px SCREEN RESOLUTION
+---------------------------------------------------------------------===========================================*/
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+        height: 12%;
+    }
+    ul.menu {
+        top: 53%;
+        left: 48%;
+    }
+    ul li {
+        font-size: 35px;
+    }
+    .homeBgImage {
+        position: relative;
+        background-image: url(../assets/img/mainPhone.jpg);
+    }
+    h1 {
+        font-size: 27px;
+    }
+    p {
+        font-size: larger;
+    }
+    .h1,
+    h1 {
+        font-size: 26px;
+    }
+    #contact {
+        padding-top: 10%;
+    }
+    .otherServices {
+        margin-top: -32%;
+    }
+    .roadSchema,
+    .toolWorkshop {
+        width: 55% !important;
+        margin: 0%!important;
+    }
+    video {
+        width: unset;
+    }
+    .container {
+        margin: unset;
+    }
+    .logoC {
+        left: 20vh;
+    }
+    .arrowSection {
+        display: none;
+    }
+    video {
+        display: none;
+    }
+    .service {
+        display: none;
+    }
+    .aboutUs {
+        height: 85vh;
+    }
+    .mainHeading {
+        font-size: medium;
+        right: unset;
+    }
+    .mainHeading {
+        position: absolute;
+        top: 200px;
+        right: 0px;
+        padding: 0.9%;
+        color: darkred;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: right;
+        background-color: #159031ad;
+    }
+    .slogan {
+        top: 250px;
+        right: 0px;
+        font-size: 1.5em;
+    }
+    #openButton {
+        left: 45%;
+        top: 85%;
+    }
+    .textWorkshop {
+        font-size: 1em !important;
+    }
+    /*hide the logo to don't overwhelm the home page*/
+    .bike {
+        opacity: 0;
+    }
+    .menu-items {
+        font-size: 1em !important;
+        width: 30%;
+    }
+    .service {
+        padding: 0.9%;
+        justify-content: left;
+        padding-top: 0px;
+        font-weight: bold;
+        font-size: 1.5em;
+        width: 100%;
+        padding: 1%;
+        position: absolute!important;
+        left: 33%;
+        cursor: pointer!important;
+    }
+    .navBtn {
+        width: 10%;
+    }
+    .productBox {
+        width: 820px;
+        text-align: center;
+    }
+    .workshop {
+        position: absolute;
+        background-color: #159031ad;
+        padding-bottom: 0px;
+        justify-content: center;
+        padding-bottom: unset;
+        text-align: center;
+        height: 40%;
+        bottom: 0%;
+        z-index: 1;
+        width: 100%;
+        margin: unset;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+                 MOBILE STYLES - 568px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 568px) {
+    /*.allTrainers {
+        column-count: 2; 
+    }*/
+    .pDetail {
+        padding: 0;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .newCollectionB {
+        margin-right: 4vw;
+        margin-bottom: 0vw;
+    }
+    .homeBgImage {
+        height: 100vh;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+                 TABLET STYLES - 768px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+    /*.allTrainers {
+        column-count: 4; 
+    }*/
+    .homeBgImage {
+        height: 80vh;
+    }
+    .container {
+        width: 100%;
+    }
+    .addToCart {
+        margin-bottom: 100px;
+    }
+    .userPass {
+        display: inline;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1024px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+    .lds-gear {
+        right: 100vh;
+    }
+    header {
+        height: 10%;
+    }
+    .textWorkshop {
+        font-size: 0.5em !important;
+    }
+    .service {
+        font-size: 1.6em;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 80vh;
+    }
+    .zoomin img:hover {
+        transform: scale(1.2)
+    }
+    .navC {
+        background-color: #0d1f119e;
+        border-bottom: none;
+        text-align: right;
+        padding: 20px 0;
+    }
+    .menu-items,
+    .viewCart {
+        display: inline;
+    }
+    .menu-items {
+        font-size: 1rem;
+    }
+    .cartIcon,
+    .navBtn,
+    .hand {
+        display: none;
+    }
+    .homeBgImage {
+        height: 100vh;
+    }
+    .logoC {
+        z-index: 99;
+    }
+    #contactButton {
+        font-size: 1.2em;
+        padding: 1%;
+        left: -3%;
+        margin: 4%;
+        padding: 3%;
+    }
+    .videoC {
+        margin: 0px 0px 0 0;
+        width: 100%;
+        float: center;
+        height: auto;
+    }
+    .mainHeading {
+        position: absolute;
+        top: 150px;
+        right: 20px;
+        padding: 0.9%;
+        color: darkred;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: right;
+        background-color: #159031ad;
+    }
+}
+
+
+/*===============SCREEN RESOUTIIONS========================*/
+
+
+/*===============SCREEN RESOUTIIONS========================*/
+
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1280px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 1280px) {
+    .Cart-header {
+        height: 80px;
+    }
+    .zoomin img:hover {
+        transform: scale(1.2)
+    }
+    .textWorkshop {
+        font-size: 0.6em !important;
+    }
+    .service {
+        font-size: 1.5em;
+        padding: 0%!important;
+        position: absolute;
+    }
+    .title1 {
+        padding: 5px;
+        TOP: -5%;
+        POSITION: absolute;
+        LEFT: 10%;
+    }
+    .text1 {
+        background-color: #ffffffbf;
+        top: 50%;
+        FONT-SIZE: 13PX;
+        TOP: 3%;
+        position: relative;
+    }
+    .form-group {
+        top: 5%;
+        position: relative;
+        left: -2%;
+    }
+    label {
+        color: aliceblue;
+        background-color: dimgray;
+    }
+    label.containerC {
+        color: aliceblue;
+        background-color: unset;
+    }
+    .containerC {
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+    .imgtoggle {
+        width: 40%;
+        top: 20%;
+    }
+    .myform {
+        top: 5%;
+        height: 100%;
+        /*    left:-10%;*/
+    }
+    #error1,
+    #error2,
+    #error3,
+    #error0,
+    #error4 {
+        color: red;
+    }
+    #error0 {
+        margin: 2%;
+    }
+    .form-control {
+        width: 160px !important;
+    }
+    .repairsBar:focus {
+        width: 30%;
+    }
+    .contactForm,
+    .emailForm:focus {
+        width: 95%;
+    }
+    .nameForm1:focus {
+        width: 95%;
+    }
+    .formFIG {
+        width: 100%;
+        height: 100%;
+    }
+    #contactButton {
+        font-size: 1.2em;
+        padding: 1%;
+        left: -3%;
+    }
+    .submit {
+        top: 20%;
+        margin-left: 15%;
+    }
+    .buttonPop {
+        top: 65%;
+        PADDING: 1%;
+        visibility: visible;
+        animation-delay: 0.5s;
+    }
+    .buttonPop:hover {
+        background-color: white;
+        color: forestgreen;
+        border-color: black;
+    }
+    #popUpDiv {
+        margin-top: 0.5%;
+        height: 680%;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+                 LAPTOP STYLE & PROJECTOR!!!! - 1350px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 1350px) {
+    .zoomin img:hover {
+        transform: scale(1.2)
+    }
+    .workshop {
+        height: 25%;
+    }
+    .textWorkshop {
+        font-size: 0.5em !important;
+    }
+    .title1 {
+        padding: 5px;
+        TOP: -5%;
+        POSITION: absolute;
+        LEFT: 10%;
+    }
+    .text1 {
+        top: 50%;
+        FONT-SIZE: 13PX;
+        TOP: 3%;
+        position: relative;
+    }
+    .form-group {
+        top: 5%;
+        position: relative;
+        left: -2%;
+    }
+    label {
+        color: aliceblue;
+        background-color: dimgray;
+    }
+    label.containerC {
+        color: aliceblue;
+        background-color: unset;
+    }
+    .containerC {
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+    .imgtoggle {
+        width: 40%;
+        top: 20%;
+    }
+    .myform {
+        top: 5%;
+        height: 100%;
+        /*    left:-10%;*/
+    }
+    /*  ====================BOX BOTTOM POP UP WINDOW=========*/
+    .resultt {
+        height: 33%;
+        margin: 2%;
+        color: white;
+        top: -55%;
+    }
+    #contactButton {
+        font-size: 1.2em;
+        padding: 1%;
+        left: 5%;
+    }
+    .contactButton1 {
+        top: 38%;
+        left: 75%;
+        position: absolute;
+    }
+    #allresult {
+        position: absolute;
+        left: 35%;
+        top: 28%;
+    }
+    #result {
+        padding: 1%;
+        left: 40%;
+    }
+    .closepopup {
+        font-size: 1.2em;
+        padding: 1%;
+        top: 75%;
+        position: absolute;
+        left: 46%;
+    }
+    .form2 {
+        left: 34%;
+        top: -80%;
+    }
+    .form1 {
+        left: 78%;
+        top: -81.5%;
+    }
+    .resultButton {
+        margin: 2%;
+    }
+    /*  ====================END BOX BOTTOM POP UP WINDOW=========*/
+    .nameForm1,
+    .contactForm,
+    .emailForm,
+    .repairsBar,
+    .form-control {
+        width: 130px;
+    }
+    .form-control {
+        width: 160px !important;
+    }
+    .repairsBar:focus {
+        width: 30%;
+    }
+    .contactForm,
+    .emailForm:focus {
+        width: 95%;
+    }
+    .nameForm1:focus {
+        width: 95%;
+    }
+    .formFIG {
+        width: 100%;
+        height: 100%;
+    }
+    #contactButton {
+        font-size: 1.2em;
+        padding: 1%;
+        left: -3%;
+    }
+    .submit {
+        top: 20%;
+        margin-left: 15%;
+    }
+    .buttonPop {
+        top: 65%;
+        PADDING: 1%;
+        visibility: visible;
+        animation-delay: 0.5s;
+    }
+    .buttonPop:hover {
+        background-color: white;
+        color: forestgreen;
+        border-color: black;
+    }
+    #popUpDiv {
+        margin-top: 0.5%;
+        height: 680%;
+    }
+    /*=========================================the popup window===========================================*/
+    /*===================MOUNTAIN BIKES===========================  */
+    .container {
+        width: 100%;
+        position: relative;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+                 COMPUTER CLASSROOM STYLE!!!! - 1680px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 1600px) {
+    .zoomin img:hover {
+        transform: scale(1.25)
+    }
+    .textWorkshop {
+        font-size: 0.5em !important;
+    }
+    .workshop {
+        height: 25%;
+    }
+    .myform {
+        top: 5%;
+        height: 100%;
+        /* left: -10%; */
+    }
+    .text1 {
+        left: 5%;
+        top: 1%;
+        font-size: 15px;
+        position: relative;
+    }
+    .title1 {
+        padding: 5px;
+        TOP: -8%;
+        POSITION: relative;
+        LEFT: 0%;
+    }
+    .containerC {
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+    .form-group {
+        top: 2%;
+        position: relative;
+        left: 0%;
+    }
+    #contactButton {
+        font-size: 1.2em;
+        padding: 1%;
+        left: 5%;
+    }
+    .contactButton1 {
+        top: 38%;
+        left: 40.9%;
+    }
+    #allresult {
+        position: absolute;
+        left: 36%;
+        top: 20%;
+    }
+    #result {
+        padding: 1%;
+        left: 40%;
+    }
+    .resultt {
+        height: 32%;
+        margin: 2%;
+        color: white;
+        top: -55%;
+    }
+    .resultsarticle {
+        width: 50%;
+    }
+    .closepopup {
+        top: 78%;
+        left: 45%;
+    }
+}
+
+
+/*---------------------------------------------------------------------
+                 DESKTOP STYLES - 1920px SCREEN RESOLUTION
+---------------------------------------------------------------------*/
+
+@media screen and (min-width: 1910px) {
+    ul.menu {
+        top: 50%!important;
+        left: 50%!important;
+    }
+    .textWorkshop {
+        font-size: 0.7em !important;
+    }
+    .text1 {
+        left: 8% !important;
+        top: 1%;
+        font-size: 16px;
+        position: relative;
+    }
+    .form-group {
+        top: 2%;
+        position: relative;
+        left: 0%;
+    }
+    #blanket {
+        position: absolute;
+        z-index: 9001;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+    }
+    /*=========================Tickbox=================================*/
+    .titleworshop {
+        position: relative;
+        font-size: 50px;
+    }
+    .containerC {
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+    .title1 {
+        padding: 5px;
+        left: 0%;
+    }
+    .imgtoggle {
+        width: 40%;
+        top: 20%;
+    }
+    .myform {
+        top: 5%;
+        height: 100%;
+        /*    left:-10%;*/
+    }
+    .text1 {
+        padding: 2px;
+        padding: 4px;
+        left: 2%;
+    }
+    #error1,
+    #error2,
+    #error3,
+    #error0,
+    #error4 {
+        color: red;
+    }
+    #error0 {
+        margin: 2%;
+    }
+    /*  ====================BOX BOTTOM POP UP WINDOW=========*/
+    .resultt {
+        margin: 2%;
+        top: -50%;
+    }
+    #allresult {
+        position: absolute;
+        left: 37%;
+        top: 20%;
+    }
+    #result {
+        padding: 1%;
+    }
+    .closepopup {
+        font-size: 1.2em;
+        padding: 1%;
+        left: 43%;
+    }
+    .form1 {
+        left: 75%;
+        top: -70%;
+    }
+    .form2 {
+        left: 34%;
+        top: -70%;
+    }
+    .resultButton {
+        margin: 2%;
+    }
+    /*  ====================END BOX BOTTOM POP UP WINDOW=========*/
+    .nameForm1,
+    .contactForm,
+    .emailForm,
+    .repairsBar,
+    .form-control {
+        width: 130px;
+    }
+    .form-control {
+        width: 160px !important;
+    }
+    .repairsBar:focus {
+        width: 30%;
+    }
+    .contactForm,
+    .emailForm:focus {
+        width: 95%;
+    }
+    .nameForm1:focus {
+        width: 95%;
+    }
+    .formFIG {
+        width: 100%;
+        height: 100%;
+    }
+    #contactButton {
+        font-size: 1.2em;
+        padding: 1%;
+        left: -3%;
+    }
+    .contactButton1 {
+        font-size: 1.2em;
+        padding: 1%;
+        left: 40%;
+        MARGIN: 5%;
+    }
+    .submit {
+        top: 20%;
+        margin-left: 15%;
+    }
+    .buttonPop {
+        top: 65%;
+        PADDING: 1%;
+    }
+    #popUpDiv {
+        width: 96%;
+        height: 550%;
+        z-index: 9002;
+        margin-top: 3.5%;
+    }
+    /*=========================================the popup window===========================================*/
+}
+
+
+/*===========================================================*/
+
+
+/*==============================***************CALENDAR************=========================================================*/
+
+.ui-datepicker {
+    margin: 5px auto 0;
+    font: 12pt Arial, sans-serif;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+}
+
+.ui-datepicker table {
+    width: 100%;
+}
+
+.ui-datepicker-header {
+    background: #3399ff;
+    color: #ffffff;
+    font-family: 'Times New Roman';
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #111;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 15px;
+}
+
+.ui-datepicker-prev {
+    float: left;
+    cursor: pointer;
+    background-position: center -30px;
+}
+
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+    background-position: center 0px;
+}
+
+.ui-datepicker thead {
+    background-color: #f7f7f7;
+    /*border-bottom: 1px solid #bbb;*/
+}
+
+.ui-datepicker th {
+    background-color: #808080;
+    text-transform: uppercase;
+    font-size: 8pt;
+    color: #666666;
+    /*text-shadow: 1px 0px 0px #fff;*/
+    /*filter: dropshadow(color=#fff, offx=1, offy=0);*/
+}
+
+.ui-datepicker tbody td {
+    padding: 0;
+    /*border-right: 1px solid #808080;*/
+}
+
+.ui-datepicker tbody td:last-child {
+    border-right: 0px;
+}
+
+.ui-datepicker tbody tr {
+    border-bottom: 1px solid #bbb;
+}
+
+.ui-datepicker tbody tr:last-child {
+    border-bottom: 0px;
+}
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+    display: inline-block;
+    /*font-weight: bold;*/
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    /*text-shadow: 1px 1px 0px #fff;*/
+    /*filter: dropshadow(color=#fff, offx=1, offy=1);*/
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    background: linear-gradient(#999999, #737373);
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    background: #33adff;
+    color: #FFFFFF;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: #33adff;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    color: #e0e0e0;
+    text-shadow: 0px 1px 0px #4d7a85;
+    border: 1px solid #55838f;
+    position: relative;
+    margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    background: #D6E4BE;
+    color: #000;
+}
+
+/* Angular layer */
+
+::ng-deep .cdk-overlay-container .cdk-overlay-pane {
+    max-width: inherit!important;
+    width: inherit!important;
+
+}
+.custom-dialog-container .mat-dialog-container {
+    color:#31353d!important;
+    background-color:#31353d!important;
+
+}
+
+::ng-deep .mat-dialog-container{
+    border-radius: unset!important;
+}
+
+.hideNav{
+    z-index: -5;
+}

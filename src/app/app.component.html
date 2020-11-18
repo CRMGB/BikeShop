@@ -1,0 +1,24 @@
+<header *ngIf="nav.visible" class="container-fluid headerC">
+  <a class="workShop service">TRY OUR APP TO BOOK ANY REPAIR NOW!</a>
+  <img src="/assets/img/LOGO.png" class="logoC" />
+
+  <!-- NAVIGATION SECTION =========================================== -->
+  <button id="buttonMenu" #buttonMenu (click)="openMenu()"></button>
+  <!-- <a routerLinkActive="active-link" routerLink="./modules/general/mountain-bikes">WORKSHOP</a> -->
+  <div id="cd-cart-trigger" style="font-size: 1rem;">
+    <a id="cart" class="fa fa-shopping-cart fa-4x mb-4"></a>
+  </div>
+</header>
+    <!-- NAVIGATION SECTION ENDS ==================================== -->
+
+<!-- <h2>Angular Route Resolver Demo</h2>
+<ul class="nav">
+  <li>
+    <a routerLink="/home">Home</a>
+  </li>
+  <li>
+    <a routerLink="/users">Users</a>
+  </li>
+</ul> -->
+
+<router-outlet></router-outlet>

@@ -1,0 +1,298 @@
+<section id='link' class="container MOUNTAIN">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="DemoSection">
+        <h1 class="titleMountain">DEMO BIKES</h1>
+        <p>Select a date in the calendar to pick up your demo bike and return it to the shop. You'll find disabled days when the bike is taken.</p>
+        <p>We'll make sure the bike is serviced before and after the demo session. See our policy for more information.</p>
+        </br>
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <h1 class=contacttitle>CHOOSE DATES</h1>
+                <img src="../img/Calendar.png" class="img-fluid">
+                <p>Select a date in the calendar to pick up your demo bike and return it to the shop.</p>
+            </div>
+
+            <div class="col-md-3 col-xs-6">
+                <h1 class=contacttitle>DELIVERY/<br>PICK UP</h1>
+                <img src="../img/Delivery.png" class="img-fluid">
+                <p>You can choose whether you want to pick up the demo bike from the shop or get it delivered home.</p>
+            </div>
+
+            <div class="col-md-3 col-xs-6">
+                <h1 class=contacttitle>ENJOY THE RIDE!</h1>
+                <img src="../img/cycleDemo.png" class="img-fluid">
+                <p>Enjoy the bike you selected serviced for you.</p>
+            </div>
+
+            <div class="col-md-3 col-xs-6">
+                <h1 class=contacttitle>RETURN BIKE</h1>
+                <img src="../img/Delivery-Shop.png" class="img-fluid">
+                <p>Whether you choosed delivery or drop the bike in to the shop.</p>
+            </div>
+            </br>
+    </section>
+    <h1 class="titleMountain">ENDURO BIKES</h1>
+    <div class="mountainBikes" id="objectbikes">
+        <article class="simpleCart_shelfItem form-group col-md-20 zoomin mountainBikes productBox wow rotateInDownLeft" data-wow-delay="0.4s" href="mountainBikes/index.html">
+            <figure>
+                <div class="item">
+                    <img src="../mountainBikes/bikes/01_CAPRA27_CF_Pro_Race_Deep_Petrol_Cart_720x600.png" alt="item">
+                    <figcaption class="pDetail">
+                        <div class="item_name">DEMO CAPRA 27 CF PRO RACE</div><input id="priceCapra" type="hidden" value="50">£50/day</input>
+                    </figcaption>
+
+                    <div class="md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: #32d2cb; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Pick up date" id="CapraStart" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: #32d2cb; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Return date" id="CapraEnd" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <a type="button" id='capraButton' class="item_add" onClick="CalculateDiff(document.getElementById('CapraStart').value, 
+        document.getElementById('CapraEnd').value, 1, document.getElementById('priceCapra').value);" value="add to cart">Add to Cart</a>
+                    <div style="margin:1%;" id="Days1"></div>
+                    <div class="item_price" style="margin:1%;" id="Result1"></div>
+                    <div id="log"></div>
+
+                </div>
+            </figure>
+        </article>
+        <article class="simpleCart_shelfItem form-group col-md-20 zoomin mountainBikes productBox wow rotateInDownLeft" data-wow-delay="0.4s" href="mountainBikes/index.html">
+            <figure>
+                <div class="item">
+                    <img src="../mountainBikes/bikes/strive-cf-9-team-us_c1248-1199x739_phone.png" alt="item">
+                    </br>
+                    <figcaption class="pDetail">
+                        <div class="item_name">DEMO CANYON Strive CF 9.0 Team 2018</div>
+                        <input id="priceCanyon" type="hidden" value="50">£50/day</input>
+                    </figcaption>
+
+                    <div class="md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: #32d2cb; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Pick up date" id="CanyonStart" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    <div class="md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: #32d2cb; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Return date" id="CanyonEnd" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    <a type="button" id='CanyonButton' class="item_add" onClick="CalculateDiff(document.getElementById('CanyonStart').value, 
+        document.getElementById('CanyonEnd').value, 2, document.getElementById('priceCanyon').value);" value="add to cart">Add to Cart</a>
+                    <div style="margin:1%;" id="Days2"></div>
+                    <div class="item_price" style="margin:1%;" id="Result2"> </div>
+                </div>
+            </figure>
+        </article>
+    </div>
+</section>
+</section>
+<!-- HARD TAILS & XC BIKES ================================================ -->
+<section class="container section4">
+    <h1 class="titleMountain">HARD TAILS & XC BIKES</h1>
+    <div class="mountainBikes" id="objectbikes">
+        <article class="simpleCart_shelfItem form-group col-md-20 zoomin mountainBikes productBox2 wow rotateInDownLeft" data-wow-delay="0.4s" href="">
+            <figure>
+                <div class="item">
+                    <img src="../mountainBikes/bikes/Orange_Crush_Pro_3Q_phone.png" alt="item">
+                    <figcaption class="pDetail">
+                        <div class="item_name">DEMO Orange Crush Pro 3Q Enduro 2019</div><input id="priceOrange" type="hidden" value="40">£40/day</input>
+                    </figcaption>
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Pick up date" id="OrangeStart" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Return date" id="OrangeEnd" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    <button type="button" id='OrangeButton' onClick="CalculateDiff(document.getElementById('OrangeStart').value, 
+        document.getElementById('OrangeEnd').value, 3, document.getElementById('priceOrange').value);" class="item_add btn btn-link">Add to Cart</button>
+                    <div style="margin:1%;" id="Days3"></div>
+                    <div class="item_price" style="margin:1%;" id="Result3"> </div>
+                </div>
+            </figure>
+        </article>
+        <article class="simpleCart_shelfItem form-group col-md-20 zoomin mountainBikes productBox2 wow rotateInDownLeft" data-wow-delay="0.4s">
+            <figure>
+                <div class="item">
+                    <img src="../mountainBikes/bikes/Mondraker-2019-Podium-Carbon-RR-29-8404-l-2.jpg" alt="item">
+                    <figcaption class="pDetail">
+                        <div class="item_name">DEMO Mondraker Podium Carbon RR 3Q XC 2019</div><input id="pricePodium" type="hidden" value="50">£50/day</input>
+                    </figcaption>
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Pick up date" id="MondrakerStart" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Return date" id="MondrakerEnd" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <button type="button" id='MondrakerButton' onClick="CalculateDiff(document.getElementById('MondrakerStart').value, 
+        document.getElementById('MondrakerEnd').value, 4, document.getElementById('pricePodium').value);" class="item_add btn btn-link">Add to Cart</button>
+                    <div style="margin:1%;" id="Days4"></div>
+                    <div class="item_price" style="margin:1%;" id="Result4"> </div>
+                </div>
+            </figure>
+        </article>
+    </div>
+</section>
+<!-- E-BIKES ================================================ -->
+<section class="container section4">
+    <h1 class="titleMountain">E-BIKES</h1>
+    <div class="mountainBikes" id="objectbikes">
+        <article class="simpleCart_shelfItem form-group col-md-20 zoomin mountainBikes productBox2 wow rotateInDownLeft" data-wow-delay="0.4s">
+            <figure>
+                <div class="item">
+                    <img src="../mountainBikes/bikes/Cannondale-Moterra-enduro-mtb-e-bike-2020-Bosch-CX-18.jpg" alt="item">
+                    <figcaption class="pDetail">
+                        <div class="item_name">DEMO Cannondale Moterra enduro mtb e bike 2020</div>
+                        <input id="priceMoterra" type="hidden" value="60">£60/day</input>
+                    </figcaption>
+
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Pick up date" id="CannondaleStart" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black;font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Return date" id="CannondaleEnd" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    <button type="button" id='CannondaleButton' onClick="CalculateDiff(document.getElementById('CannondaleStart').value, 
+        document.getElementById('CannondaleEnd').value, 5, document.getElementById('priceMoterra').value);" class="item_add btn btn-link">Add to Cart</button>
+                    <div style="margin:1%;" id="Days5"></div>
+                    <div class="item_price" style="margin:1%;" id="Result5"> </div>
+                </div>
+            </figure>
+        </article>
+        <article class="simpleCart_shelfItem form-group col-md-20 zoomin mountainBikes productBox2 wow rotateInDownLeft" data-wow-delay="0.4s">
+            <figure>
+                <div class="item">
+                    <img src="../mountainBikes/bikes/Specialized-Turbo-Kenevo-Expert-black-2019.jpeg" alt="item">
+                    <figcaption class="pDetail">
+                        <div class="item_name">DEMO Specialized Turbo Kenevo Expert black 2019</div>
+                        <input id="priceKenevo" type="hidden" value="60">£60/day</input>
+                    </figcaption>
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Pick up date" id="SpecializedStart" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+
+                    <div class=" md-form col-mr-4 col-md-offset-2 input-group date insertInfo">
+                        <input style="color: black; font-weight: bold!important;
+           font-size: large;" type="text" placeholder="Return date" id="SpecializedEnd" class="form-control">
+                        <div class="input-group-addon close-button">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    <button type="button" id='SpecializedButton' onClick="CalculateDiff(document.getElementById('SpecializedStart').value, 
+        document.getElementById('SpecializedEnd').value, 6, document.getElementById('priceKenevo').value);" class="item_add btn btn-link">Add to Cart</button>
+                    <div style="margin:1%;" id="Days6"></div>
+                    <div class="item_price" style="margin:1%;" id="Result6"> </div>
+                </div>
+            </figure>
+        </article>
+</section>
+<div class="containerFilter"></div>
+<section id="ABOUT US" class="aboutUs">
+    <h1 class=contacttitle>ABOUT</h1>
+    <div class="holdingC">
+        <div class="aboutText">
+
+            <article class="zoomin frame toolWorkshop">
+                <img class="workShop imgAbout" src="../img/tools-folder-svgWORSHOP.png">
+            </article>
+
+            <p>We are bike specialist with more than 10 years experience looking forward to seeing your satisfaction with our products and workshop. We give you the best advise to buy the right bike, setting up for you every component and personalizing
+                your future bike.</p>
+
+
+            <p>We offer you the best price with the cycling to work scheme!.</p>
+
+            <p>You can trust in our service! we offer a range of bike services in-store to keep your bike on the road and you don't have to worry about any maintenance because we give you a strong warranty.</p>
+        </div>
+
+    </div>
+</section>
+<!-- CONTACT SECTION ============================================= -->
+</div>
+<section id="contact" class="container section5">
+    <div class="row">
+        <div class="col-md-3 col-xs-6">
+            <h1 class=contacttitle>CONTACT</h1>
+            <div style="text-align: center">
+                <p>Ground Floor<br>10-1 St Mark's Hill<br>London KT6 4PJ</p><br>
+                </span>
+                <a href="tel:07428228258"><i class="fa fa-2x fa-phone iconsContact" aria-hidden="true"></i>
+          07428228258</a><br>
+
+                <a href="mailto:cristianbisby@gmail.com"><i class="fa fa-2x fa-envelope iconsContact" aria-hidden="true"></i>
+          Email us</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <h1 class=contacttitle>BIKES</h1>
+            <div style="text-align: center">
+                <a href="../mountainBikes/index.html">Mountain bikes</a><br>
+                <a href="../roadBikes/index.html">Road bikes</a><br>
+                <a href="../C2WSchema/index.html">cycling to work scheme</a><br>
+                <br><br>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+            <h1 class=contacttitle>CLEARANCE BIKES</h1>
+            <div style="text-align: center">
+                <p>Are you on the budget? Try our clearance bikes!</p><br>
+                <a href="">Mountain bikes</a><br>
+                <a href="">E-Bikes</a><br>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-6 otherServices">
+            <h1 class=contacttitle>OTHER SERVICES</h1>                <div style="text-align: center">
+                <a href="../demoBikes/index.html">Demo bikes</a><br>
+            </div>
+        </div>
+    </div>
+</section>
